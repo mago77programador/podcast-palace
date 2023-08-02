@@ -42,4 +42,5 @@ sqlite3 test.db
 If you decide to clone the repository, there is already a database where you can perform tests. The user created in the app is "feo" and the password is "123" (write it down somewhere, it's easy to forget).
 
 But...? Where is everybody?
+
 ![They have left me alone.](travoltadesierto.gif)
