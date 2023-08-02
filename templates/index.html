@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main page
+{% endblock %}
+
+{% block main %}
+
+<h1>The last audios added</h1>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Program name</th>
+            <th>Chapter number</th>
+            <th>Chapter title</th>
+            <th>Chunk #</th>
+            <th>of Total Chunks</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {% for row in latest_additions %}
+            <tr>
+                <td>{{ row["id"] }}</td>
+                <td>{{ row["program_name"] }}</td>
+                <td>{{ row["chapter_number"] }}</td>
+                <td>{{ row["chapter_title"] }}</td>
+                <td>{{ row["chunk"] }}</td>
+                <td>{{ row["total_chunks"] }}</td>                
+            </tr>        
+        {% endfor %}
+    </tbody>
+
+</table> 
+{% endblock %}

@@ -1,0 +1,166 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+.ib
+{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 1200px;
+    padding-top: 35px;
+}
+
+#insert
+{
+    background-image: url("images/stonehenge.webp"); 
+    padding-right: 44px;
+    padding-left: 44px;
+}
+
+#login
+{
+    background-image: url("images/pyramids.jpg");
+}
+
+#search
+{
+    background-image: url("images/liberty.jpg");
+    padding-right: 44px;
+    padding-left: 44px;
+}
+
+#register
+{
+    background-image: url("images/peles_castle.jpg");
+}
+
+#change
+{
+    background-image: url("images/rapa_nui.jpg");
+}
+
+#favorites
+{
+    background-image: url("images/taj_mahal.jpg");
+    font-size: 1.3em;
+    color: #051b4b;
+    padding: 46px;
+}
+
+#add
+{
+    padding-top: 11px;
+}
+
+/* Search */
+.div_hidden
+{
+    display: none;
+}
+
+.div-box
+{
+    padding: 6px;
+    margin: 12px;
+    border: 1px solid #d0d0d0;
+}
+
+#reload
+{
+    padding-top:7px;
+}
+
+#links
+{
+    /* background-color: #efefef; */
+    background-color: rgba(186, 186, 177, 0.7);
+    list-style-type: none;
+}
+
+/* insert form */
+/* Style inputs, select elements and textareas */
+input[type=text], input[type=number], select, textarea
+{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label
+{
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+
+/* Style the container */
+.container
+{
+    border-radius: 5px;
+    background-color: rgba(186, 186, 177, 0.7);
+    padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25
+{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75
+{
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px)
+{
+    .col-25, .col-75, input[type=submit]
+    {
+        width: 100%;
+        margin-top: 0;
+    }
+} 
+
+textarea 
+{
+    height: 4rem;
+}
+

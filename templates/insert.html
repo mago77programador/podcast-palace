@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Insert
+{% endblock %}
+
+{% block main %}
+    <h1>Add data to your podcast library</h1>
+    <div class="ib" id="insert">
+
+        <div class="container">
+            <form action="/insert" method="post">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="languages">Podcast language</label>
+                    </div>
+                    <div class="col-75">
+
+                        <select class="form-select" id="languages" aria-label="Languages" name="language" required>
+                            <option disabled selected>List of languages</option>                        
+                            {% for item in language_list %}
+                                <option value="{{ item }}">{{ item }}</option>
+                            {% endfor %}
+                        </select>
+
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="program_name">Program name</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="program_name" type="text" placeholder="Program name" name="program_name" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="program_name:required">Program name is required.</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="chapter_number">Chapter number</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="chapter_number" type="number" placeholder="Chapter number" name="chapter_number" data-sb-validations="" />              
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="chapter_title">Chapter title</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="chapter_title" type="text" placeholder="Chapter title" name="chapter_title" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="chapter_title:required">Chapter title is required.</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="chunk">Chunk # of...</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="chunk" type="number" placeholder="Chunk # of..." name="chunk" data-sb-validations="required" min="1" max="13" />
+                        <div class="invalid-feedback" data-sb-feedback="chunk:required">Chunk # of... is required.</div>
+                    </div>
+
+                    <div class="col-25">
+                        <label for="lname">... Total chunks</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="total_chunks" type="number" placeholder="... Total chunks" name="total_chunks" data-sb-validations="required" min="1" max="13" />
+                        
+                        <div class="invalid-feedback" data-sb-feedback="total_chunks:required">... Total chunks is required.</div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="durationHhMmSs">Duration HH:MM:SS</label>
+                    </div>
+                    <div class="col-75">
+                        <input class="form-control" id="durationHhMmSs" type="text" placeholder="Duration HH:MM:SS" name="duration" data-sb-validations="" />
+                    </div>
+                </div>
+
+
+
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="year">Year</label>
+                    </div>
+                    <div class="col-75">
+                        <input class="form-control" id="year" type="number" placeholder="Year" name="year_production" data-sb-validations="" min="1987" max="2046" />
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="Path">Path</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="path" type="text" placeholder="Path" name="location_route" data-sb-validations="" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="station">Station</label>
+                    </div>
+                    <div class="col-75">
+                        <input id="station" type="text" placeholder="Station" name="station_name" data-sb-validations="" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-25">
+                        <label for="genres">Genre / genres</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="genres" type="text" placeholder="Genre / genres" name="genre" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="text:required">Genre / genres is required.</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="tags">Tag / tags</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="tags" type="text" placeholder="Tag / tags" name="tag" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="text:required">Tag / tags is required.</div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col" id="add">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
+            </form>
+        </div> 
+
+    </div>
+
+  
+
+{% endblock %}

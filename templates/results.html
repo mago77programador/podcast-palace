@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Results
+{% endblock %}
+
+{% block main %}
+
+<h1>Results</h1>
+
+<table class="table table-success table-striped">
+    <thead>
+        <tr>
+            <th>Play</th>
+            <th>Id</th>
+            <th>Program name</th>
+            <th>Chapter number</th>
+            <th>Chapter title</th>
+            <th>Chunk #</th>
+            <th>of Total Chunks</th>
+            <th>Genres</th>
+            <th>Tags</t
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}        
+            <tr>                
+                <td>
+                    <!--<audio src="{{ location }}" controls type="audio/mpeg">-->
+                    <audio src="{{ row["location_route"] }}" controls type="audio/mpeg"></audio>
+                    </audio>
+                </td>            
+                <td>{{ row["id"] }}</td>
+                <td>{{ row["program_name"] }}</td>
+                <td>{{ row["chapter_number"] }}</td>
+                <td>{{ row["chapter_title"] }}</td>
+                <td>{{ row["chunk"] }}</td>
+                <td>{{ row["total_chunks"] }}</td>             
+                <td>                 
+                    {% for i in row["genre_list"] %}
+                        {% for k,v in i.items() %}
+                            {{ v }}<br>
+                        {% endfor %}
+                    {% endfor %}
+                </td>
+                <td>
+                    {% for i in row["tag_list"] %}
+                        {% for k,v in i.items() %}
+                            {{ v }}<br>
+                        {% endfor %}
+                    {% endfor %}
+                </td>
+              
+        {% endfor %} 
+      
+                
+        
+            </tr>        
+        
+    </tbody>
+
+</table> 
+{% endblock %}

@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+
+    <h1>Search the database</h1>
+    <div class="ib" id="search"> 
+        <div>
+            <form action="/search" method="post">
+                <div>
+                    <div class="div-container">
+                        <div class="div-box"">
+                            <div class="mb-3">
+                                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="program_name" name="program_name" placeholder="Program name" type="text">
+                            </div>
+                            <div class="form-text">
+                                The names that are most similar to the input will be searched.
+                            </div>
+                            <button class="btn btn-primary" type="submit">Search</button> 
+                                         
+                        </div>
+                        <div class="div-box">
+                            <div class="mb-3">
+                                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="chapter_title" name="chapter_title" placeholder="Chapter title" type="text">
+                            </div>
+                            <div class="form-text">
+                                The names that are most similar to the input will be searched.
+                            </div>
+                            <button class="btn btn-primary" type="submit">Search</button>
+
+                        </div>
+                        <div class="div-box">
+                            <div class="mb-3">
+                                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="genre_name" name="genre_name" placeholder="Genre" type="text">
+                            </div>
+                            <div class="form-text">
+                                The names that are most similar to the input will be searched.
+                            </div>
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        
+                        </div>
+                        <div class="div-box">
+                            <div class="mb-3">
+                                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="tag_name" name="tag_name" placeholder="Tag" type="text">
+                            </div>
+                            <div class="form-text">
+                                The names that are most similar to the input will be searched.
+                            </div>
+                            <button class="btn btn-primary" type="submit">Search</button>                        
+                        </div>
+                    </div>
+                </div>
+
+                <div id="reload">
+                    <input type="button" value="Reload Page" />
+                </div>        
+            </form>
+        </div>
+    </div>   
+
+
+{% endblock %}
